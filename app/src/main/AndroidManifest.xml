@@ -13,15 +13,23 @@
         <activity android:name=".PieChartDataActivity" />
         <activity android:name=".PieChartActivity" />
         <activity android:name=".SignInActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".CostSettingActivity"/>
         <activity android:name=".BarChartActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".MenuSettingActivity"/>
+        <activity android:name=".OrderActivity"/>
+        <activity android:name=".UserSettingActivity"/>
+        <activity android:name=".MenuUpdateActivity"/>
+        <activity android:name=".SalesStatus2Activity"/>
     </application>
 
 </manifest>
