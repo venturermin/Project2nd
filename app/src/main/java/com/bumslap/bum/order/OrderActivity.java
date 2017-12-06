@@ -15,7 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.bumslap.bum.POSproject.MainActivity;
-import com.bumslap.bum.POSproject.R;
+import com.bumslap.bum.R;
 import com.bumslap.bum.menuedit.MenuSettingActivity;
 import com.bumslap.bum.settings.UserSettingActivity;
 import com.bumslap.bum.statistics.BarChartActivity;

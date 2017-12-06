@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 
-import com.bumslap.bum.POSproject.R;
+import com.bumslap.bum.R;
 
 import java.util.ArrayList;
 

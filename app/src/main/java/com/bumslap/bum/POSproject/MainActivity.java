@@ -1,16 +1,19 @@
 package com.bumslap.bum.POSproject;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.bumslap.bum.R;
 
 
 public class MainActivity extends AppCompatActivity {
-    Intent intent;
-    ImageButton BtnStart, BtnPrepare, BtnAnalysis, BtnSetting;
+    ImageButton BtnStart;
+    ImageButton BtnPrepare;
+    ImageButton BtnAnalysis;
+    ImageButton BtnSetting;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,24 +32,27 @@ public class MainActivity extends AppCompatActivity {
         BtnSetting.setOnClickListener(BtnClick);
     }
 
-    ImageButton.OnClickListener BtnClick = new View.OnClickListener() {
-
+   ImageButton.OnClickListener BtnClick = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.button_Start:
-                    intent = new Intent(getApplicationContext(), com.bumslap.bum.order.OrderActivity.class);
+                    BtnStart.setBackgroundResource(R.drawable.button_color);
+                    Intent intent = new Intent(getApplicationContext(), com.bumslap.bum.order.OrderActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.button_Prepare:
+                    BtnStart.setBackgroundResource(R.drawable.button_color);
                     intent = new Intent(getApplicationContext(), com.bumslap.bum.menuedit.MenuSettingActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.button_Analysis:
+                    BtnStart.setBackgroundResource(R.drawable.button_color);
                     intent = new Intent(getApplicationContext(), com.bumslap.bum.statistics.PieChartDataActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.button_Setting:
+                    BtnStart.setBackgroundResource(R.drawable.button_color);
                     intent = new Intent(getApplicationContext(), com.bumslap.bum.settings.UserSettingActivity.class);
                     startActivity(intent);
                     break;

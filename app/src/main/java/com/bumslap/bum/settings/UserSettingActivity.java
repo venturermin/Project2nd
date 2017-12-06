@@ -3,7 +3,7 @@ package com.bumslap.bum.settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.bumslap.bum.POSproject.R;
+import com.bumslap.bum.R;
 
 public class UserSettingActivity extends AppCompatActivity {
 

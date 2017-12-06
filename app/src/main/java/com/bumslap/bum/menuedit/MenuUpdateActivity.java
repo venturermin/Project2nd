@@ -3,7 +3,7 @@ package com.bumslap.bum.menuedit;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.bumslap.bum.POSproject.R;
+import com.bumslap.bum.R;
 
 public class MenuUpdateActivity extends AppCompatActivity {
 

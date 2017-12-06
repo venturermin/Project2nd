@@ -7,7 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.bumslap.bum.POSproject.R;
+import com.bumslap.bum.R;
+
 
 public class MenuSettingActivity extends AppCompatActivity {
 
