@@ -17,7 +17,7 @@ import com.bumslap.bum.POSproject.MainActivity;
 import com.bumslap.bum.POSproject.R;
 import com.bumslap.bum.menuedit.MenuSettingActivity;
 import com.bumslap.bum.settings.UserSettingActivity;
-import com.bumslap.bum.statistics.SalesStatus2Activity;
+import com.bumslap.bum.statistics.BarChartActivity;
 
 public class OrderActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -100,15 +100,15 @@ public class OrderActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_analysis) {
-            Intent intent = new Intent(getApplicationContext(), SalesStatus2Activity.class);
+            Intent intent = new Intent(getApplicationContext(), BarChartActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_usersetting) {
             Intent intent = new Intent(getApplicationContext(), UserSettingActivity.class);
             startActivity(intent);
         } else if(id == R.id.nav_finish){
-
-
+            Intent intent = new Intent(getApplicationContext(), SalesStatus2Activity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
