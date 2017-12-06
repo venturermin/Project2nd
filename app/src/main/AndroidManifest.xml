@@ -24,6 +24,11 @@
 
 
         <activity android:name="com.bumslap.bum.POSproject.SignInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity android:name="com.bumslap.bum.statistics.BarChartActivity"/>
@@ -33,11 +38,7 @@
 
 
         <activity android:name="com.bumslap.bum.POSproject.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
