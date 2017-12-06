@@ -1,7 +1,9 @@
-package com.bumslap.bum.POSproject;
+package com.bumslap.bum.statistics;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.bumslap.bum.POSproject.R;
 
 public class SalesStatus2Activity extends AppCompatActivity {
 

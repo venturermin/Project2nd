@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bumslap.bum.POSproject">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,19 +9,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".PieChartDataActivity" />
-        <activity android:name=".PieChartActivity" />
+        <activity android:name="com.bumslap.bum.statistics.PieChartDataActivity" />
+        <activity android:name="com.bumslap.bum.statistics.PieChartActivity" />
         <activity android:name=".SignInActivity">
         </activity>
-        <activity android:name=".CostSettingActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+        <activity android:name="com.bumslap.bum.menuedit.CostSettingActivity">
         </activity>
-        <activity android:name=".BarChartActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.bumslap.bum.statistics.BarChartActivity">
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
-
 </manifest>

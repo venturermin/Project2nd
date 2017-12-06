@@ -1,4 +1,4 @@
-package com.bumslap.bum.POSproject;
+package com.bumslap.bum.menuedit;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+
+import com.bumslap.bum.POSproject.R;
 
 import java.util.ArrayList;
 

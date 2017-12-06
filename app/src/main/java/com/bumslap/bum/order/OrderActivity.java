@@ -1,10 +1,7 @@
-package com.bumslap.bum.POSproject;
+package com.bumslap.bum.order;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,6 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.bumslap.bum.POSproject.MainActivity;
+import com.bumslap.bum.POSproject.R;
+import com.bumslap.bum.menuedit.MenuSettingActivity;
+import com.bumslap.bum.settings.UserSettingActivity;
+import com.bumslap.bum.statistics.SalesStatus2Activity;
 
 public class OrderActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -86,21 +89,25 @@ public class OrderActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(getApplicationContext(), MenuUpdateActivity.class);
+        if (id == R.id.nav_home) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_start) {
+            Intent intent = new Intent(getApplicationContext(), OrderActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_prepare) {
+            Intent intent = new Intent(getApplicationContext(), MenuSettingActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_analysis) {
+            Intent intent = new Intent(getApplicationContext(), SalesStatus2Activity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_share) {
-
-        } else if(id == R.id.setting_user){
+        } else if (id == R.id.nav_usersetting) {
             Intent intent = new Intent(getApplicationContext(), UserSettingActivity.class);
             startActivity(intent);
+        } else if(id == R.id.nav_finish){
+
 
         }
 
