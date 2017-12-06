@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.bumslap.bum.R;
+
 
 public class SignUpActivity extends AppCompatActivity {
     EditText password;
