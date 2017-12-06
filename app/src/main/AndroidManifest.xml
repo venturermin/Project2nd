@@ -21,7 +21,7 @@
         <activity android:name="com.bumslap.bum.menuedit.MenuSettingActivity" />
         <activity android:name="com.bumslap.bum.menuedit.CostSettingActivity">
         </activity>
-        <activity android:name=".SignInActivity">
+        <activity android:name="com.bumslap.bum.POSproject.SignInActivity">
         </activity>
 
         <activity android:name="com.bumslap.bum.statistics.BarChartActivity">

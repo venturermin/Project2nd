@@ -4,13 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.bumslap.bum.menuedit.MenuSettingActivity;
-import com.bumslap.bum.order.OrderActivity;
-import com.bumslap.bum.settings.UserSettingActivity;
-import com.bumslap.bum.statistics.PieChartActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
