@@ -16,6 +16,7 @@
 
         <activity android:name="com.bumslap.bum.order.OrderActivity" />
 
+        <activity android:name="com.bumslap.bum.settings.UserSettingActivity" />
 
         <activity android:name="com.bumslap.bum.menuedit.MenuUpdateActivity" />
         <activity android:name="com.bumslap.bum.menuedit.MenuSettingActivity" />
