@@ -89,21 +89,25 @@ public class OrderActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-            Intent intent = new Intent(getApplicationContext(), MenuUpdateActivity.class);
+        if (id == R.id.nav_home) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_start) {
+            Intent intent = new Intent(getApplicationContext(), OrderActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_prepare) {
+            Intent intent = new Intent(getApplicationContext(), MenuSettingActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_analysis) {
+            Intent intent = new Intent(getApplicationContext(), SalesStatus2Activity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_share) {
-
-        } else if(id == R.id.setting_user){
+        } else if (id == R.id.nav_usersetting) {
             Intent intent = new Intent(getApplicationContext(), UserSettingActivity.class);
             startActivity(intent);
+        } else if(id == R.id.nav_finish){
+
 
         }
 
