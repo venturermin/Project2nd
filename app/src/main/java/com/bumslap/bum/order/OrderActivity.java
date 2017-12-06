@@ -1,10 +1,7 @@
-package com.bumslap.bum.POSproject;
+package com.bumslap.bum.order;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,6 +12,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.bumslap.bum.POSproject.R;
+import com.bumslap.bum.menuedit.MenuUpdateActivity;
+import com.bumslap.bum.settings.UserSettingActivity;
 
 public class OrderActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

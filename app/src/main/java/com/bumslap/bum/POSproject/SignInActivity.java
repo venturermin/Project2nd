@@ -49,12 +49,6 @@ public class SignInActivity extends AppCompatActivity {
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso); //signinclient  잘 이해되지 않는다
-
-
-
-
-
-
     }
 
     protected void onResume(){
@@ -71,13 +65,9 @@ public class SignInActivity extends AppCompatActivity {
 
 
     private void signin(){
-
-
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
-
-
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) { //구글과 파이어베이스의 플랫폼이 달라 해당 메서드 이용.
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
@@ -92,8 +82,6 @@ public class SignInActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),"Authentication is checked",Toast.LENGTH_LONG).show();
                             //Intent intent = new Intent(SignInActivity.this, .class);
                            // startActivity(intent);
-
-
 
                         } else {
 
@@ -176,8 +164,6 @@ public class SignInActivity extends AppCompatActivity {
 
     public void onClickedSignIn(View v){
 
-
-
         if(!emailText.getText().toString().equals("") && !PasswordText.getText().toString().equals("")) {
             String email = emailText.getText().toString();
             String password = PasswordText.getText().toString();
@@ -191,6 +177,7 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void onClickedSignUp(View v){
+        /*
         if(!emailText.getText().toString().equals("") && !PasswordText.getText().toString().equals("")) {
             String email = emailText.getText().toString();
             String password = PasswordText.getText().toString();
@@ -198,7 +185,9 @@ public class SignInActivity extends AppCompatActivity {
         }
         else {
             Toast.makeText(getApplicationContext(),"Not Available",Toast.LENGTH_LONG).show();
-        }
+        }*/
+        Intent intentSingup = new Intent(getApplicationContext(), SignUpActivity.class);
+        startActivity(intentSingup);
     }
 
 }//end of class

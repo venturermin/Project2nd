@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".PieChartDataActivity" />
-        <activity android:name=".PieChartActivity" />
+        <activity android:name="com.bumslap.bum.statistics.PieChartDataActivity" />
+        <activity android:name="com.bumslap.bum.statistics.PieChartActivity" />
         <activity android:name=".SignInActivity">
         </activity>
-        <activity android:name=".CostSettingActivity">
+        <activity android:name="com.bumslap.bum.menuedit.CostSettingActivity">
 
         </activity>
-        <activity android:name=".BarChartActivity">
+        <activity android:name="com.bumslap.bum.statistics.BarChartActivity">
 
         </activity>
         <activity android:name=".MainActivity">

@@ -1,9 +1,11 @@
-package com.bumslap.bum.POSproject;
+package com.bumslap.bum.menuedit;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.bumslap.bum.POSproject.R;
 
 public class CostSettingActivity extends AppCompatActivity {
 
