@@ -18,6 +18,7 @@ import com.bumslap.bum.POSproject.R;
 import com.bumslap.bum.menuedit.MenuSettingActivity;
 import com.bumslap.bum.settings.UserSettingActivity;
 import com.bumslap.bum.statistics.BarChartActivity;
+import com.bumslap.bum.statistics.SalesStatus2Activity;
 
 public class OrderActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
