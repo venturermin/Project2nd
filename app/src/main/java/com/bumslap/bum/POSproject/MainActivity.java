@@ -9,31 +9,33 @@ import android.widget.ImageButton;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    Intent intent;
+    ImageButton BtnStart, BtnPrepare, BtnAnalysis, BtnSetting;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton BtnStart = (ImageButton)findViewById(R.id.button_Start);
+        BtnStart = (ImageButton)findViewById(R.id.button_Start);
         BtnStart.setOnClickListener(BtnClick);
 
-        ImageButton BtnPrepare = (ImageButton)findViewById(R.id.button_Prepare);
+        BtnPrepare = (ImageButton)findViewById(R.id.button_Prepare);
         BtnPrepare.setOnClickListener(BtnClick);
 
-        ImageButton BtnAnalysis = (ImageButton)findViewById(R.id.button_Analysis);
+        BtnAnalysis = (ImageButton)findViewById(R.id.button_Analysis);
         BtnAnalysis.setOnClickListener(BtnClick);
 
-        ImageButton BtnSetting = (ImageButton)findViewById(R.id.button_Setting);
+        BtnSetting = (ImageButton)findViewById(R.id.button_Setting);
         BtnSetting.setOnClickListener(BtnClick);
     }
 
     ImageButton.OnClickListener BtnClick = new View.OnClickListener() {
+
         @Override
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.button_Start:
-                    Intent intent = new Intent(getApplicationContext(), com.bumslap.bum.order.OrderActivity.class);
+                    intent = new Intent(getApplicationContext(), com.bumslap.bum.order.OrderActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.button_Prepare:

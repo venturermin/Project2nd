@@ -24,6 +24,7 @@ import com.bumslap.bum.statistics.SalesStatus2Activity;
 public class OrderActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,17 +34,10 @@ public class OrderActivity extends AppCompatActivity
         // setContentView()가 호출되기 전에 setRequestedOrientation()이 호출되어야 함
         setTitle("오늘도 달려 보세");
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
         //toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.reply));
-
-        //listview 안 에 내 용 넣 기
-        String[] Bills = new String[]{"Noodle : 1 개","Cat : 1 개","Noodle : 3 개\nCat : 2 개"};
-        ListView listView = (ListView)findViewById(R.id.list_order);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.listview_order,Bills);
-        listView.setAdapter(arrayAdapter);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -55,6 +49,15 @@ public class OrderActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    @Override
+    public void onPause(){
+        super.onPause();
+        //listview 안 에 내 용 넣 기
+        String[] Bills = new String[]{"Noodle : 1 개","Cat : 1 개","Noodle : 3 개\nCat : 2 개"};
+        ListView listView = (ListView)findViewById(R.id.list_order);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.listview_order,Bills);
+        listView.setAdapter(arrayAdapter);
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -83,7 +86,6 @@ public class OrderActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -94,24 +96,24 @@ public class OrderActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_start) {
-            Intent intent = new Intent(getApplicationContext(), OrderActivity.class);
+            intent = new Intent(getApplicationContext(), OrderActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_prepare) {
-            Intent intent = new Intent(getApplicationContext(), MenuSettingActivity.class);
+            intent = new Intent(getApplicationContext(), MenuSettingActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_analysis) {
-            Intent intent = new Intent(getApplicationContext(), BarChartActivity.class);
+            intent = new Intent(getApplicationContext(), BarChartActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.nav_usersetting) {
-            Intent intent = new Intent(getApplicationContext(), UserSettingActivity.class);
+            intent = new Intent(getApplicationContext(), UserSettingActivity.class);
             startActivity(intent);
         } else if(id == R.id.nav_finish){
-            Intent intent = new Intent(getApplicationContext(), SalesStatus2Activity.class);
+            intent = new Intent(getApplicationContext(), SalesStatus2Activity.class);
             startActivity(intent);
         }
 

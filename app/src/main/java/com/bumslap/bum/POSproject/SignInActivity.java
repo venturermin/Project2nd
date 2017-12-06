@@ -78,13 +78,13 @@ public class SignInActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-
-                            Toast.makeText(getApplicationContext(),"Authentication is checked",Toast.LENGTH_LONG).show();
-                            //Intent intent = new Intent(SignInActivity.this, .class);
-                           // startActivity(intent);
+                            Toast.makeText(getApplicationContext(),"Authntication is checked",Toast.LENGTH_LONG).show();
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                            startActivity(intent);
 
                         } else {
-
+                            Toast.makeText(getApplicationContext(),"fail",Toast.LENGTH_LONG).show();
                         }
 
                         // ...
@@ -145,8 +145,8 @@ public class SignInActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                           //Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                            //startActivity(intent);
+                            Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                            startActivity(intent);
 
                         } else {
 
