@@ -1,14 +1,21 @@
 package com.bumslap.bum.menuedit;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 
-import com.bumslap.bum.POSproject.R;
+import com.bumslap.bum.R;
+
+import java.util.ArrayList;
 
 public class CostSettingActivity extends AppCompatActivity {
-
+    ListView listView_cost;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,5 +32,7 @@ public class CostSettingActivity extends AppCompatActivity {
                 Menu);
         spinnerMenu.setAdapter(adapter);
         spinnerMenu.setSelection(0);
+
     }
 }
+

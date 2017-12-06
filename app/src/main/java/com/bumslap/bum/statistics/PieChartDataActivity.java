@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.bumslap.bum.POSproject.R;
+import com.bumslap.bum.R;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.Entry;
@@ -26,12 +26,6 @@ import java.util.ArrayList;
 public class PieChartDataActivity extends AppCompatActivity {
     static final String[] LIST_MENU = {"Steak x 8", "Juice x 1", "Cola x 2"};
 
-
-
-
-
-
-
     PieChart mChart;
     private int[] yValues = {8,1,1};
     private String[] xValues = {"Steak","Juice","Cola"};
@@ -46,7 +40,7 @@ public class PieChartDataActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_salesstatus);
+        setContentView(R.layout.activity_salesstatus_goh);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_activated_1 ,LIST_MENU) ;
 
